@@ -4,7 +4,7 @@ function App() {
 
   return (
    <>
-    Nigga balls
+    N**ga balls
    </>
   )
 }
