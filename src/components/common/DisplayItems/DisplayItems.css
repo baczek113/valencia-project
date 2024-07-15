@@ -1,0 +1,19 @@
+.display-items-container
+{
+    display: flex;
+    width: 75vw;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px;
+    
+    .loading-screen
+    {
+        font-size: 40px;
+        letter-spacing: 5px;
+        font-weight: 600;
+        color: #ff5c1c;
+    }
+}

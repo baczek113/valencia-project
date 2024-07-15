@@ -1,0 +1,16 @@
+.navigator-btn
+{
+    padding: 20px 30px;
+    background-color: transparent;
+    color: #A9A9A9;
+    transition: .2s ease-in-out;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 1px;
+    border: none;
+
+    &:hover{
+        color: #ff5c1c;
+        letter-spacing: 2px;
+    }
+}

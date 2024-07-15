@@ -1,0 +1,98 @@
+.card
+{
+    display: flex;
+    width: 25%;
+    height: 300px;
+    background-color: #111111;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    border-radius: 8px;
+
+    img{
+        height: 50%;
+        object-fit: contain;
+    }
+
+    .name{
+        color: #ff5c1c;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .bottom-half
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .view-details
+        {
+            text-transform: uppercase;
+            background-color: #111111;
+            color: white;
+            letter-spacing: 1px;
+            font-weight: 550;
+            padding: 8px 18px;
+            transition: ease-in-out .2s;
+            border-radius: 5px;
+
+            &:hover
+            {
+                border: none;
+                color: black;
+                background-color: #ff5c1c;
+            }
+        }
+
+        .add-to-fav, .add-to-fav--favourited
+        {
+            background-color: transparent;
+            border: none;
+            svg path
+            {
+                transition: .2s ease-in-out;
+            }
+
+            &:hover
+            {
+                border: none;
+            }
+        }
+
+        .add-to-fav
+        {
+            svg path
+            {
+                fill: white;
+            }
+
+            &:hover
+            {
+                svg path
+                {
+                    fill: #ff5c1c; 
+                }
+            }
+        }
+
+        .add-to-fav--favourited
+        {
+            svg path
+            {
+                fill: #ff5c1c;
+            }
+
+            &:hover
+            {
+                svg path
+                {
+                    fill: white; 
+                }
+            }
+        }
+    }
+}

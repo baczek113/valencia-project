@@ -1,0 +1,44 @@
+.beers{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-bottom: 80px;
+
+    .select-type
+    {
+        width: 100vw;
+        height: 10vh;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 10px;
+
+        div
+        {
+            padding: 20px 30px;
+            background-color: transparent;
+            color: #A9A9A9;
+            transition: .2s ease-in-out;
+            text-transform: uppercase;
+            font-weight: 550;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+
+            &:hover{
+                color: #ff5c1c;
+                letter-spacing: 2px;
+            }
+        }
+
+        .selected{
+            color: #ff5c1c;
+            letter-spacing: 2px;
+        }
+    }
+}

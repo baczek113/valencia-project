@@ -1,0 +1,43 @@
+.login-page {
+  width: 100vw;
+  height: 82vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .login-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    .login-button {
+      padding: 12px 60px;
+      border-radius: 5px;
+      background-color: black;
+      color: #ff5c1c;
+      transition: ease-in-out 0.2s;
+      border: none;
+      letter-spacing: 1px;
+      font-weight: 550;
+      margin-top: 5px;
+
+      &:hover {
+        background-color: #ff5c1c;
+        color: black;
+        letter-spacing: 2px;
+        font-weight: 600;
+      }
+    }
+
+    .error-message
+    {
+      height: 10px;
+      color: #ff5c1c;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 550;
+      font-size: 10px;
+    }
+  }
+}
