@@ -12,6 +12,11 @@
     img{
         height: 50%;
         object-fit: contain;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 18px;
     }
 
     .name{

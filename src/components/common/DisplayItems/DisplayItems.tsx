@@ -25,6 +25,7 @@ const DisplayItems: React.FC<DisplayItemsIF> = ({ type }) => {
             <CCard
               beer={singleBeer}
               cat={type}
+              key={singleBeer.id + type}
             />
           );
         })

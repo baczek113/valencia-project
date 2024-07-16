@@ -47,7 +47,7 @@ const CCard: React.FC<CCardIF> = ({ beer, cat }) => {
 
   return (
     <div className="card">
-      <img src={beer.image} />
+      <img src={beer.image} alt="image couldn't load" />
       <div className="name">{beer.name}</div>
       <div className="bottom-half">
         <button className="view-details" onClick={() => viewDetails()}>
