@@ -45,7 +45,7 @@ const Login = () => {
         else
         {
           userToken.setter("token", res.token);
-          navigate("/beers");
+          navigate("/wines");
         }
     });
 

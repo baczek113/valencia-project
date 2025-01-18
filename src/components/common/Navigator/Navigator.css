@@ -9,7 +9,8 @@
     letter-spacing: 1px;
     border: none;
 
-    &:hover{
+    &:hover, &:focus{
+        outline: 0;
         color: #ff5c1c;
         letter-spacing: 2px;
     }

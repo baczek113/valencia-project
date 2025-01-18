@@ -3,11 +3,13 @@
     display: flex;
     width: 75vw;
     flex-direction: row;
-    gap: 30px;
+    gap: 40px;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding-top: 60px;
+    padding-bottom: 80px;
+    min-height: 62vh;
     
     .loading-screen
     {

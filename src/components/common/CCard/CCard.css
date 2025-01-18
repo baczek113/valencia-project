@@ -75,6 +75,11 @@
                 fill: white;
             }
 
+            &:focus
+            {
+                outline: none;
+            }
+
             &:hover
             {
                 svg path
@@ -89,6 +94,11 @@
             svg path
             {
                 fill: #ff5c1c;
+            }
+
+            &:focus
+            {
+                outline: none;
             }
 
             &:hover

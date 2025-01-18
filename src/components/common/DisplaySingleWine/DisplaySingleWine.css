@@ -1,4 +1,4 @@
-.single-beer
+.single-wine
 {
     height: 70vh;
     width: 70vw;
@@ -25,7 +25,7 @@
         justify-content: space-between;
         border-radius: 8px; 
 
-        .beer-name
+        .wine-name
         {
             text-align: center;
             font-weight: 550;
@@ -35,7 +35,7 @@
             letter-spacing: 1.5px;
         }
 
-        .beer-image
+        .wine-image
         {
             object-fit: contain;
             width: 100%;
@@ -59,7 +59,7 @@
         margin-top: 25px;
         height: 10%;
 
-        .beer-price
+        .wine-price
         {
             font-size: 22px;
             letter-spacing: 2px;

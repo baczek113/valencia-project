@@ -1,4 +1,4 @@
-import { BeerErrorHandlingIF, BeerIF, CredentialsErrorIF, CredentialsIF } from "../interfaces";
+import { WineErrorHandlingIF, WineIF, CredentialsErrorIF, CredentialsIF } from "../interfaces";
 
 const verifyCredentials = (type: string, value: string): CredentialsErrorIF => {
   switch (type) {
@@ -45,18 +45,18 @@ catch{
   
 }
 
-const requestBeer = async (type : string) : Promise<BeerErrorHandlingIF> => { 
+const requestWine = async (type : string) : Promise<WineErrorHandlingIF> => { 
 
     try {
       const resp = await fetch('https://api.sampleapis.com/wines/'+type);
       const json = await resp.json();
-      return {beersList: json, error: false, errorMessage: ""};
+      return {winesList: json, error: false, errorMessage: ""};
     } catch (err) {
-      return {beersList: [], error: true, errorMessage: err};
+      return {winesList: [], error: true, errorMessage: err};
     }
 }
 
-const requestSingleBeer = async (type : string, id : number) : Promise<BeerIF | any> => { 
+const requestSingleWine = async (type : string, id : number) : Promise<WineIF | any> => { 
 
   try {
     const resp = await fetch('https://api.sampleapis.com/wines/'+type+"/"+id);
@@ -69,8 +69,8 @@ const requestSingleBeer = async (type : string, id : number) : Promise<BeerIF | 
 const globalFunctions = {
   verifyCredentials,
   authenticateUser,
-  requestBeer,
-  requestSingleBeer
+  requestWine,
+  requestSingleWine
 }
 
 export default globalFunctions;

@@ -4,21 +4,20 @@ import { UserToken } from "../../../services/contexts";
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const CCard: React.FC<CCardIF> = ({ beer, cat }) => {
+const CCard: React.FC<CCardIF> = ({ wine, cat }) => {
 
-  // const[favourited, setFavourited] = useState<boolean>(false);
   const globalProps = useContext(UserToken);
   const navigate = useNavigate();
 
   const viewDetails = (): void => {
-    globalProps.setter("selectedBeer", beer.id);
+    globalProps.setter("selectedWine", wine.id);
     navigate("/details");
   };
 
   const isFavourited = (): boolean => {
     let favourited = false;
     globalProps.favourites.forEach((item: FavouritesIF)=>{
-      if(item.cat === cat && item.id === beer.id)
+      if(item.cat === cat && item.id === wine.id)
       {
         favourited = true;
       }
@@ -31,7 +30,7 @@ const CCard: React.FC<CCardIF> = ({ beer, cat }) => {
     if(isFavourited())
     {
       globalProps.favourites.forEach((item: FavouritesIF, index: number)=>{
-        if(item.cat === cat && item.id === beer.id)
+        if(item.cat === cat && item.id === wine.id)
         {
           favouritesCopy.splice(index, 1);
         }
@@ -39,7 +38,7 @@ const CCard: React.FC<CCardIF> = ({ beer, cat }) => {
     }
     else
     {
-      favouritesCopy.push({"id": beer.id, "cat": cat})
+      favouritesCopy.push({"id": wine.id, "cat": cat})
     }
 
     globalProps.setter("favourites", favouritesCopy);
@@ -47,12 +46,14 @@ const CCard: React.FC<CCardIF> = ({ beer, cat }) => {
 
   return (
     <div className="card">
-      <img src={beer.image} alt="image couldn't load" />
-      <div className="name">{beer.wine}</div>
+      <img src={wine.image} alt="image couldn't load" />
+      <div className="name">{wine.wine}</div>
       <div className="bottom-half">
         <button className="view-details" onClick={() => viewDetails()}>
           View details
         </button>
+        {
+        globalProps.token !== ""?
         <button className={`add-to-fav${isFavourited()?"--favourited":""}`} onClick={()=>{addToFavourites()}}>
           <svg
             height="20px"
@@ -68,6 +69,8 @@ const CCard: React.FC<CCardIF> = ({ beer, cat }) => {
             />
           </svg>
         </button>
+        : ""
+    }
       </div>
     </div>
   );

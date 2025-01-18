@@ -31,23 +31,23 @@ export interface DisplayItemsIF {
   type: string
 }
 
-interface BeerRating {
+interface WineRating {
   average: string,
   reviews: string
 }
 
-export interface BeerIF {
+export interface WineIF {
   winery: string,
   wine: string,
-  rating: BeerRating,
+  rating: WineRating,
   location: string,
   image: string,
   id: number
 }
 
-export interface BeerErrorHandlingIF {
+export interface WineErrorHandlingIF {
   error: boolean,
-  beersList: BeerIF[],
+  winesList: WineIF[],
   errorMessage: any
 }
 
@@ -57,10 +57,10 @@ export interface FavouritesIF {
 }
 
 export interface CCardIF {
-  beer: BeerIF,
+  wine: WineIF,
   cat: string
 }
 
 export interface ReviewsIF {
-  rating: BeerRating,
+  rating: WineRating,
 }
