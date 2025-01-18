@@ -2,6 +2,7 @@ import './DisplaySingleBeer.css'
 import { UserToken } from '../../../services/contexts'
 import { useContext } from 'react';
 import { BeerIF } from '../../../interfaces';
+import Reviews from '../Reviews/Reviews';
 
 const DisplaySingleBeer = () => {
 
@@ -21,22 +22,16 @@ const DisplaySingleBeer = () => {
 
   const selectedBeerData = getBeerData();
 
-  console.log(selectedBeerData);
-
-
   return (
     <div className="single-beer">
       <div className="left-panel">
-        <div className="beer-name">{selectedBeerData.name}</div>
+        <div className="beer-name">{selectedBeerData.wine}</div>
         <img className="beer-image" src={selectedBeerData.image}/>
       </div>
       <div className="right-panel">
-        <div className="beer-price">{selectedBeerData.price}</div>
-        <div className="number-of-reviews">{selectedBeerData.rating.reviews} reviews</div>
-        <div className="avg-score">{selectedBeerData.rating.average.toFixed(2)}</div>
+        <Reviews rating={selectedBeerData.rating}/>
       </div>
     </div>
-
   )
 }
 

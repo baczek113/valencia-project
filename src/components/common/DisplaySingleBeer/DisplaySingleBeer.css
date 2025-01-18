@@ -1,6 +1,6 @@
 .single-beer
 {
-    height: 82vh;
+    height: 70vh;
     width: 70vw;
     display: flex;
     flex-direction: row;
@@ -13,7 +13,7 @@
     .left-panel
     {
         width: 30%;
-        background-color: black;
+        background-color: #111111;
         padding-left: 30px;
         padding-right: 50px;
         padding-bottom: 45px;
@@ -23,15 +23,16 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        border-radius: 8px; 
 
         .beer-name
         {
+            text-align: center;
             font-weight: 550;
             font-size: 25px;
             color: #ff5c1c;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            text-align: left;
         }
 
         .beer-image
@@ -44,11 +45,19 @@
 
     .right-panel
     {
-        width: 35%;
+        width: 30%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+        background-color: #111111;
+        border-radius: 8px;
+        padding-left: 30px;
+        padding-right: 50px;
+        padding-bottom: 45px;
+        padding-top: 35px;
+        margin-top: 25px;
+        height: 10%;
 
         .beer-price
         {

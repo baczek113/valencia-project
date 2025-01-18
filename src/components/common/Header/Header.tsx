@@ -10,7 +10,7 @@ const Header = () => {
   return (
    <div className="header">
       <Navigator text="Home" path="/"/>
-      <Navigator text="Beers" path="/beers"/>
+      <Navigator text="Wines" path="/beers"/>
       {
         token.token === ""?
         <Navigator text="Login" path="/login"/>

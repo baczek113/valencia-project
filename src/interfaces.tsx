@@ -32,14 +32,15 @@ export interface DisplayItemsIF {
 }
 
 interface BeerRating {
-  average: number,
-  reviews: number
+  average: string,
+  reviews: string
 }
 
 export interface BeerIF {
-  price: string,
-  name: string,
+  winery: string,
+  wine: string,
   rating: BeerRating,
+  location: string,
   image: string,
   id: number
 }
@@ -58,4 +59,8 @@ export interface FavouritesIF {
 export interface CCardIF {
   beer: BeerIF,
   cat: string
+}
+
+export interface ReviewsIF {
+  rating: BeerRating,
 }

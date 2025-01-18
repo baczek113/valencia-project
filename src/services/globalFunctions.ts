@@ -48,7 +48,7 @@ catch{
 const requestBeer = async (type : string) : Promise<BeerErrorHandlingIF> => { 
 
     try {
-      const resp = await fetch('https://api.sampleapis.com/beers/'+type);
+      const resp = await fetch('https://api.sampleapis.com/wines/'+type);
       const json = await resp.json();
       return {beersList: json, error: false, errorMessage: ""};
     } catch (err) {
@@ -59,7 +59,7 @@ const requestBeer = async (type : string) : Promise<BeerErrorHandlingIF> => {
 const requestSingleBeer = async (type : string, id : number) : Promise<BeerIF | any> => { 
 
   try {
-    const resp = await fetch('https://api.sampleapis.com/beers/'+type+"/"+id);
+    const resp = await fetch('https://api.sampleapis.com/wines/'+type+"/"+id);
     const json = await resp.json();
     return json;
   } catch (err) {
